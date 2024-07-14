@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --light-red: hsl(0, 100%, 67%);
-    --orangey-yellow: hsl(39, 100%, 56%);
-    --green-teal: hsl(166, 100%, 37%);
-    --cobalt-blue: hsl(234, 85%, 45%);
+    --light-red: 0, 100%, 67%;
+    --orangey-yellow: 39, 100%, 56%;
+    --green-teal: 166, 100%, 37%;
+    --cobalt-blue: 234, 85%, 45%;
 
     --light-slate-blue: hsl(252, 100%, 67%);
     --light-royal-blue: hsl(241, 81%, 54%);
@@ -94,8 +94,85 @@ h2, h3 {
     opacity: 0.6;
 }
 
+.summary {
+    padding: 1.625rem 1.875rem;
+}
+
+.summary h2 {
+    margin-bottom: 1.5rem;
+}
+
+.summary-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.summary-list li {
+    font-weight: 800;
+    margin-bottom: 1rem;
+    min-height: 54px;
+    border-radius: 0.5rem;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.summary-list li > span:first-child {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.summary-list span:last-child {
+    color: var(--dark-gray-blue);
+}
+
+.summary-list span:last-child span {
+    color: black;
+    margin-right: 0.125rem;
+}
+
+.summary-list svg {
+    margin-right: 0.5rem;
+}
+
 .attribution { font-size: 11px; text-align: center; display: none; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+.bg-red {
+    background-color: hsla(var(--light-red), 0.1);
+}
+
+.bg-yellow {
+    background-color: hsla(var(--orangey-yellow), 0.1);
+}
+
+.bg-green {
+    background-color: hsla(var(--green-teal), 0.1);
+}
+
+.bg-blue {
+    background-color: hsla(var(--cobalt-blue), 0.1);
+}
+
+.text-red {
+    color: hsl(var(--light-red));
+}
+
+.text-yellow {
+    color: hsl(var(--orangey-yellow));
+}
+
+.text-green {
+    color: hsl(var(--green-teal));
+}
+
+.text-blue {
+    color: hsl(var(--cobalt-blue));
+}
+
 
 .sr-only {
     position: absolute;
