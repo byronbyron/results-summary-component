@@ -113,11 +113,10 @@ h2, h3 {
 }
 
 .summary-list li {
-    font-weight: 800;
+    font-weight: 500;
     margin-bottom: 1rem;
     min-height: 56px;
     border-radius: 0.5rem;
-    opacity: 0.5;
     display: flex;
     align-items: center;
     padding: 1rem;
@@ -127,16 +126,16 @@ h2, h3 {
     display: flex;
     align-items: center;
     margin-right: auto;
-    filter: brightness(80%) saturate(120%) contrast(120%);
 }
 
 .summary-list span:last-child {
-    color: var(--dark-gray-blue);
+    font-weight: 700;
+    color: hsla(224, 30%, 27%, 0.5);
 }
 
 .summary-list span:last-child span {
-    color: black;
     margin-right: 0.25rem;
+    color: var(--dark-gray-blue);
 }
 
 .summary-list svg {
@@ -166,19 +165,19 @@ h2, h3 {
 .attribution a { color: hsl(228, 45%, 44%); }
 
 .bg-red {
-    background-color: hsla(var(--light-red), 0.1);
+    background-color: hsla(var(--light-red), 0.05);
 }
 
 .bg-yellow {
-    background-color: hsla(var(--orangey-yellow), 0.1);
+    background-color: hsla(var(--orangey-yellow), 0.05);
 }
 
 .bg-green {
-    background-color: hsla(var(--green-teal), 0.1);
+    background-color: hsla(var(--green-teal), 0.05);
 }
 
 .bg-blue {
-    background-color: hsla(var(--cobalt-blue), 0.1);
+    background-color: hsla(var(--cobalt-blue), 0.05);
 }
 
 .text-red {
@@ -273,6 +272,7 @@ h2, h3 {
         font-size: 1.5rem;
         font-weight: 600;
         margin-bottom: 1.875rem;
+        text-indent: 0;
     }
 
     .summary-list li {
