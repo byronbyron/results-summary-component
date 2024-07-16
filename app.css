@@ -28,6 +28,7 @@ body {
     font-weight: 400;
     line-height: 1.4;
     background-color: var(--white);
+    min-width: 375px;
 }
 
 h2, h3, p, ul {
@@ -39,14 +40,16 @@ h2, h3 {
     line-height: 1.1;
 }
 
+.container {
+    max-width: 736px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .results {
     color: var(--light-lavender);
     background: linear-gradient(to bottom, var(--light-slate-blue), var(--light-royal-blue));
     min-height: 356px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
     border-radius: 0 0 2rem 2rem;
     padding: 1.25rem 1.5rem;
     text-align: center;
@@ -73,7 +76,7 @@ h2, h3 {
 .circle {
     width: 140px;
     height: 140px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -83,7 +86,7 @@ h2, h3 {
 
 .circle span:first-child {
     font-size: 3.5rem;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.25;
     color: var(--white);
     margin-top: 0.375rem;
@@ -95,11 +98,12 @@ h2, h3 {
 }
 
 .summary {
-    padding: 1.625rem 1.875rem;
+    padding: 1.625rem 1.875rem 1.875rem 1.875rem;
 }
 
 .summary h2 {
     margin-bottom: 1.5rem;
+    text-indent: 0.125rem;
 }
 
 .summary-list {
@@ -111,7 +115,7 @@ h2, h3 {
 .summary-list li {
     font-weight: 800;
     margin-bottom: 1rem;
-    min-height: 54px;
+    min-height: 56px;
     border-radius: 0.5rem;
     opacity: 0.5;
     display: flex;
@@ -123,6 +127,7 @@ h2, h3 {
     display: flex;
     align-items: center;
     margin-right: auto;
+    filter: brightness(80%) saturate(120%) contrast(120%);
 }
 
 .summary-list span:last-child {
@@ -131,11 +136,24 @@ h2, h3 {
 
 .summary-list span:last-child span {
     color: black;
-    margin-right: 0.125rem;
+    margin-right: 0.25rem;
 }
 
 .summary-list svg {
-    margin-right: 0.5rem;
+    margin-right: 0.75rem;
+}
+
+.btn {
+    font-size: 1.125rem;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    min-height: 56px;
+    border-radius: 56px;
+    color: var(--white);
+    background: var(--dark-gray-blue);
+    border: 0;
+    margin-top: 1.5rem;
 }
 
 .attribution { font-size: 11px; text-align: center; display: none; }
@@ -186,10 +204,78 @@ h2, h3 {
     border-width: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 736px) {
     .container {
-        max-width: 736px;
-        margin-left: auto;
-        margin-right: auto;
+        margin-top: 284px;
+        margin-bottom: 284px;
+        border-radius: 2rem;
+        box-shadow: 0 2rem 4rem hsl(241deg 100% 89% / 40%);
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .col {
+        flex: 1;
+    }
+
+    .results {
+        padding: 2.625rem 2rem;
+        border-radius: 2rem;
+        min-height: 512px;
+    }
+
+    .results h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 2.25rem;
+        text-indent: -0.375rem;
+    }
+
+    .circle {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 2rem;
+    }
+
+    .circle span:first-child {
+        font-size: 4.5rem;
+        line-height: 1.1;
+    }
+
+    .circle span:last-child {
+        font-size: 1.125rem;
+    }
+
+    .results h3 {
+        font-size: 2rem;
+        margin-bottom: 1.125rem;
+        text-indent: -0.375rem;
+    }
+
+    .results p:last-child {
+        font-size: 1.125rem;
+        max-width: 26ch;
+        margin-bottom: 0;
+    }
+
+    .summary {
+        padding: 2.625rem 2.5rem;
+    }
+
+    .summary h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1.875rem;
+    }
+
+    .summary-list li {
+        font-size: 1.125rem;
+        margin-bottom: 0.9375rem;
+    }
+
+    .btn {
+        margin-top: 2.5rem;
     }
 }
